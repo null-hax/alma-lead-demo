@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { Lead } from '../route';
@@ -21,23 +21,34 @@ function saveLeads(leads: Lead[]) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(leads, null, 2));
 }
 
-export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
-  const { id } = params;
-  const { status } = await req.json();
+export async function PUT(request: Request) {
+  try {
+    // Get ID from URL
+    const segments = request.url.split('/');
+    const id = segments[segments.length - 1];
+    
+    const { status } = await request.json();
 
-  if (status !== 'REACHED_OUT' && status !== 'PENDING') {
-    return NextResponse.json({ error: 'Invalid status' }, { status: 400 });
+    if (!id || (status !== 'REACHED_OUT' && status !== 'PENDING')) {
+      return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
+    }
+
+    const leads = getLeads();
+    const leadIndex = leads.findIndex(lead => lead.id === id);
+
+    if (leadIndex === -1) {
+      return NextResponse.json({ error: 'Lead not found' }, { status: 404 });
+    }
+
+    leads[leadIndex].status = status;
+    saveLeads(leads);
+
+    return NextResponse.json(leads[leadIndex]);
+  } catch (error) {
+    console.error('Error updating lead:', error);
+    return NextResponse.json(
+      { error: 'Failed to update lead' },
+      { status: 500 }
+    );
   }
-
-  const leads = getLeads();
-  const leadIndex = leads.findIndex((lead: Lead) => lead.id === id);
-
-  if (leadIndex === -1) {
-    return NextResponse.json({ error: 'Lead not found' }, { status: 404 });
-  }
-
-  leads[leadIndex].status = status;
-  saveLeads(leads);
-
-  return NextResponse.json({ message: 'Lead status updated successfully', lead: leads[leadIndex] });
 }

@@ -70,7 +70,7 @@ export default function LeadsListPage() {
   const handleStatusChange = async (leadId: string, newStatus: 'PENDING' | 'REACHED_OUT') => {
     try {
       const response = await fetch(`/api/leads/${leadId}`, {
-        method: 'PATCH',
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${process.env.NEXT_PUBLIC_AUTH_TOKEN}`
