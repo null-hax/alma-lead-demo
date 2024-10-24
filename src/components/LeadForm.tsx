@@ -96,7 +96,6 @@ export default function LeadForm() {
       }
 
       const result = await response.json();
-      console.log('Lead submitted successfully:', result);
 
       setIsSubmitted(true);
     } catch (error) {
