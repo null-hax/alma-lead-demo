@@ -4,7 +4,7 @@
     "firstName": "John",
     "lastName": "Doe",
     "email": "john.doe@example.com",
-    "countryOfCitizenship": "USA",
+    "countryOfCitizenship": "England",
     "linkedin": "https://linkedin.com/in/johndoe",
     "visasInterested": [
       "O-1",
@@ -426,5 +426,21 @@
     "openInput": "Software architect seeking permanent residency",
     "status": "REACHED_OUT",
     "createdAt": "2024-01-24T13:35:56.456Z"
+  },
+  {
+    "id": "1729731179646",
+    "firstName": "Happy",
+    "lastName": "Gilmore",
+    "email": "happy@gilmore.com",
+    "countryOfCitizenship": "France",
+    "linkedin": "http://www.happy.com",
+    "visasInterested": [
+      "O-1",
+      "EB-1A"
+    ],
+    "resumeUrl": "https://example.com/resumes/1099_8W544602-2024-01-19.pdf",
+    "openInput": "Help!",
+    "status": "PENDING",
+    "createdAt": "2024-10-24T00:52:59.646Z"
   }
 ]
