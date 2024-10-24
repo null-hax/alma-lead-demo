@@ -108,13 +108,13 @@ export default function LeadForm() {
 
   if (isSubmitted) {
     return (
-      <div className="text-center">
+      <div className="text-center max-w-lg mx-auto">
         <Image src="/images/checkmark-icon.png" alt="Info" width={48} height={48} className="mx-auto mb-4" />
         <h2 className="text-2xl font-bold mb-2">Thank You</h2>
         <p className="mb-4 font-bold">Your information was submitted to our team of immigration attorneys. Expect an email from hello@tryalma.ai.</p>
         <button
           onClick={() => window.location.href = '/'}
-          className="bg-black text-white font-bold py-2 px-4 rounded hover:bg-green-600 transition duration-300"
+          className="bg-black text-white font-bold py-4 px-24 rounded-lg hover:bg-green-600 transition duration-300 mt-8 text-sm "
         >
           Go Back to Homepage
         </button>
