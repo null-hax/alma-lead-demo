@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+You can view the live site [here](https://alma-lead-demo.vercel.app/).
+
 ## Getting Started
 
 First, create a .env file and add the following:
