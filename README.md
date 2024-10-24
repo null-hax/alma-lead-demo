@@ -2,35 +2,40 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies and run the development server:
 
 ```bash
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Functional Requirements
+- Public lead form
+- Internal leads list UI guarded by authentication
+- Ability to change lead status from PENDING to REACHED_OUT
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Non-functional Requirements
+- File upload for resume/CV - only .pdf, .doc, .docx allowed
+- Form validation
+- Styling with Tailwind CSS
+- Follow Next.js best practices for routing, styling, directory structure, etc.
 
-## Learn More
+## Bonus Points
+- [x] Implement API routes using Next.js API
+- [ ] Use [JsonForms](https://jsonforms.io/) to implement the lead form in a configuration driven way (JsonForms is a configuration driven UI component lib)
+- [ ] Use a state management library (e.g., Redux) to manage the state of the leads.
+- [ ] Implement unit tests for key components and functionalities.
+- [x] Add responsiveness to ensure the application works well on different screen sizes.
+- [x] Use TypeScript for type safety.
+- [x] Implement form validation feedback (e.g., show error messages when fields are not filled in correctly).
+- [ ] Document the system design.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Next Steps
+If I had more time, I would:
+- Update /admin/leads to be a dynamic route. Right now it's a static page which is why the search, filter and sort functionality only affects the given page. 
+- Add unit tests using Jest.
+- Update state management to use Redux.
+- Update the lead form to use JsonForms.
