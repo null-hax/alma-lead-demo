@@ -8,7 +8,7 @@ export default function LeadFormPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="bg-alma-green p-4 h-96 flex items-center justify-center relative overflow-hidden">
-        <div className="absolute w-1/4 inset-0 w-full h-full">
+        <div className="absolute w-1/4 inset-0 h-full">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-alma-green z-10" />
           <Image 
             src="/images/background.png" 
