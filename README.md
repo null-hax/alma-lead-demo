@@ -20,25 +20,26 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-Click "Submit your information now" to navigate to /lead-form.
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Enter the required fields and click "Submit" to submit the form.
+- Click "Submit your information now" to navigate to /lead-form.
 
-Click "Go back to homepage" to navigate back to the homepage.
+- Enter the required fields and click "Submit" to submit the form.
 
-Click "Admin Login" to navigate to /admin/login to login.
+- Click "Go back to homepage" to navigate back to the homepage.
 
-Once logged in, you will be redirected to /admin/leads to view the leads.
+- Click "Admin Login" to navigate to /admin/login to login.
 
-The most recent leads are at the top of the list.
+- Once logged in, you will be redirected to /admin/leads to view the leads.
+  - The most recent leads are at the top of the list.
 
-You can search, filter, and sort the leads.
+- You can search, filter, and sort the leads.
 
-You can also change the status of a lead from PENDING to REACHED_OUT and vice versa.
+- You can also change the status of a lead from PENDING to REACHED_OUT and vice versa.
 
-Go back home by clicking Alma logo or logging out by clicking "Admin" in the bottom left.
+- Go back home by clicking Alma logo or logging out by clicking "Admin" in the bottom left.
 
 ## Functional Requirements
 - Public lead form
