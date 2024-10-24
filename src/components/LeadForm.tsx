@@ -124,7 +124,7 @@ export default function LeadForm() {
   }
 
   return (
-    <div className="max-w-xl mx-auto">
+    <div className="max-w-xl mx-auto p-4 sm:p-0">
       <div className="flex flex-col items-center mb-4">
         <Image src="/images/info-icon.png" alt="Info" width={48} height={48} />
         <h2 className="text-2xl font-semibold mt-4">Want to understand your visa options?</h2>
