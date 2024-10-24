@@ -7,6 +7,11 @@ import AuthWrapper from '@/components/AuthWrapper';
 import { Lead } from '@/app/api/leads/route';
 import { LEADS_PER_PAGE } from '@/config/constants';
 
+type SortConfig = {
+  key: keyof Lead | null;
+  direction: 'asc' | 'desc';
+};
+
 export default function LeadsListPage() {
   const [leads, setLeads] = useState<Lead[]>([]);
   const [filteredLeads, setFilteredLeads] = useState<Lead[]>([]);
@@ -16,6 +21,10 @@ export default function LeadsListPage() {
   const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
+  const [sortConfig, setSortConfig] = useState<SortConfig>({
+    key: null,
+    direction: 'asc'
+  });
 
   const fetchLeads = async (page: number) => {
     setIsLoading(true);
@@ -72,6 +81,18 @@ export default function LeadsListPage() {
     }
   };
 
+  const handleSort = (key: keyof Lead) => {
+    const direction = sortConfig.key === key && sortConfig.direction === 'asc' ? 'desc' : 'asc';
+    setSortConfig({ key, direction });
+
+    const sortedLeads = [...filteredLeads].sort((a, b) => {
+      if (a[key] < b[key]) return direction === 'asc' ? -1 : 1;
+      if (a[key] > b[key]) return direction === 'asc' ? 1 : -1;
+      return 0;
+    });
+    setFilteredLeads(sortedLeads);
+  };
+
   return (
     <AuthWrapper>
       <div className="flex h-screen alma-admin-gradient">
@@ -97,7 +118,7 @@ export default function LeadsListPage() {
           <main className="flex-1 overflow-x-hidden overflow-y-auto">
             <div className="container mx-auto px-6 py-8">
               <h1 className="text-3xl font-bold mb-6">Leads</h1>
-              <div className="flex items-start gap-2 mb-6">
+              <div className="flex items-start gap-2 mb-2">
                 <div className="relative">
                   <input
                     type="text"
@@ -111,7 +132,7 @@ export default function LeadsListPage() {
                   </svg>
                 </div>
                 <select
-                  className="px-4 py-2 border rounded-md h-10 text-gray-400"
+                  className="px-4 py-2 border rounded-md h-10 text-gray-400 w-28"
                   value={statusFilter}
                   onChange={(e) => setStatusFilter(e.target.value)}
                 >
@@ -131,6 +152,8 @@ export default function LeadsListPage() {
                   currentPage={currentPage}
                   totalPages={totalPages}
                   onPageChange={setCurrentPage}
+                  onSort={handleSort}
+                  sortConfig={sortConfig}
                 />
               )}
             </div>
