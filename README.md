@@ -26,6 +26,8 @@ Click "Submit your information now" to navigate to /lead-form.
 
 Enter the required fields and click "Submit" to submit the form.
 
+Click "Go back to homepage" to navigate back to the homepage.
+
 Click "Admin Login" to navigate to /admin/login to login.
 
 Once logged in, you will be redirected to /admin/leads to view the leads.
