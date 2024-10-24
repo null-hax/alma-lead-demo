@@ -102,34 +102,46 @@ export default function LeadsTable({
           ))}
         </tbody>
       </table>
-      <div className="mt-4 flex justify-end">
-        <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+      <div className="mt-4 flex justify-end gap-1 border-t border-gray-200 py-2">
+        <button
+          onClick={() => onPageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          className={`px-2 py-1 ${
+            currentPage === 1 
+              ? 'text-gray-300 cursor-not-allowed' 
+              : 'text-gray-600 hover:text-gray-900'
+          }`}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className="w-3 h-3">
+            <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+          </svg>
+        </button>
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
           <button
-            onClick={() => onPageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-            className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+            key={page}
+            onClick={() => onPageChange(page)}
+            className={`w-8 h-8 flex items-center justify-center rounded-sm ${
+              currentPage === page 
+                ? 'border border-black font-semibold bg-white' 
+                : 'text-gray-600 hover:text-gray-900'
+            }`}
           >
-            Previous
+            {page}
           </button>
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-            <button
-              key={page}
-              onClick={() => onPageChange(page)}
-              className={`relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium ${
-                currentPage === page ? 'text-indigo-600 bg-indigo-50' : 'text-gray-700 hover:bg-gray-50'
-              }`}
-            >
-              {page}
-            </button>
-          ))}
-          <button
-            onClick={() => onPageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
-            className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-          >
-            Next
-          </button>
-        </nav>
+        ))}
+        <button
+          onClick={() => onPageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className={`px-2 py-1 ${
+            currentPage === totalPages 
+              ? 'text-gray-300 cursor-not-allowed' 
+              : 'text-gray-600 hover:text-gray-900'
+          }`}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className="w-3 h-3">
+            <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+          </svg>
+        </button>
       </div>
     </div>
   );
