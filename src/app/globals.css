@@ -23,3 +23,10 @@ body {
 textarea::placeholder {
   font-size: 12px;
 }
+
+.alma-admin-gradient {
+  background: radial-gradient(circle at 0 0, #d9dea5 0%, white 25%);
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
