@@ -31,6 +31,7 @@ export default function LeadForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [demoMessage, setDemoMessage] = useState<string | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -95,7 +96,11 @@ export default function LeadForm() {
         throw new Error('Failed to submit lead');
       }
 
-      setIsSubmitted(true);
+      if (process.env.NODE_ENV === 'production') {
+        setDemoMessage('This is a demo. To submit data, please run the app locally.');
+      } else {
+        setIsSubmitted(true);
+      }
     } catch (error) {
       console.error('Error submitting lead:', error);
       setErrors(prev => ({ ...prev, submit: 'Failed to submit lead. Please try again.' }));
@@ -122,6 +127,7 @@ export default function LeadForm() {
 
   return (
     <div className="max-w-xl mx-auto p-4 sm:p-0">
+      {demoMessage && <p className="text-center text-yellow-600 mb-4">{demoMessage}</p>}
       <div className="flex flex-col items-center mb-4">
         <Image src="/images/info-icon.png" alt="Info" width={48} height={48} />
         <h2 className="text-2xl font-semibold mt-4">Want to understand your visa options?</h2>

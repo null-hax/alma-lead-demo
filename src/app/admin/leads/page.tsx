@@ -28,6 +28,7 @@ export default function LeadsListPage() {
     key: null,
     direction: 'asc'
   });
+  const [demoMessage, setDemoMessage] = useState<string | null>(null);
 
   const fetchLeads = async (page: number) => {
     setIsLoading(true);
@@ -68,6 +69,11 @@ export default function LeadsListPage() {
   }, [leads, statusFilter, searchTerm]);
 
   const handleStatusChange = async (leadId: string, newStatus: 'PENDING' | 'REACHED_OUT') => {
+    if (process.env.NODE_ENV === 'production') {
+      setDemoMessage('This is a demo. To update data, please run the app locally.');
+      return;
+    }
+
     try {
       const response = await fetch(`/api/leads/${leadId}`, {
         method: 'PUT',
@@ -151,6 +157,7 @@ export default function LeadsListPage() {
           <main className="flex-1 overflow-x-hidden overflow-y-auto">
             <div className="container mx-auto px-6 py-8">
               <h1 className="text-3xl font-bold mb-6 mt-2">Leads</h1>
+              {demoMessage && <p className="text-center text-yellow-600 mb-4">{demoMessage}</p>}
               <div className="flex items-start gap-2 mb-2">
                 <div className="relative">
                   <input

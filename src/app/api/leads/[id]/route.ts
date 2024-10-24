@@ -22,6 +22,13 @@ function saveLeads(leads: Lead[]) {
 }
 
 export async function PUT(request: Request) {
+  if (process.env.NODE_ENV === 'production') {
+    return NextResponse.json(
+      { message: 'This is a demo. To update data, please run the app locally.' },
+      { status: 200 }
+    );
+  }
+
   try {
     // Get ID from URL
     const segments = request.url.split('/');
