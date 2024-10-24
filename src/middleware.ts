@@ -3,14 +3,13 @@ import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
   const authHeader = request.headers.get('authorization');
+  const isAdminRoute = request.nextUrl.pathname.startsWith('/admin');
 
-  if (request.nextUrl.pathname.startsWith('/api/leads') && request.method !== 'POST') {
-    if (authHeader !== 'Bearer mock-token') {
-      return new NextResponse(
-        JSON.stringify({ error: 'Authentication required' }),
-        { status: 401, headers: { 'content-type': 'application/json' } }
-      );
-    }
+  if (isAdminRoute && authHeader !== `Bearer ${process.env.AUTH_TOKEN}`) {
+    return new NextResponse(
+      JSON.stringify({ error: 'Authentication required' }),
+      { status: 401, headers: { 'content-type': 'application/json' } }
+    );
   }
 }
 
