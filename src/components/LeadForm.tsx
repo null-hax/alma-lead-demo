@@ -62,7 +62,7 @@ export default function LeadForm() {
     if (!formData.resume) newErrors.resume = 'Resume is required';
     if (formData.visasInterested.length === 0) newErrors.visasInterested = 'Please select at least one visa category';
     if (!formData.openInput) newErrors.openInput = 'Please tell us how we can help you';
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -72,7 +72,7 @@ export default function LeadForm() {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
-    
+
     const formDataToSend = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
       if (key === 'visasInterested') {
@@ -123,18 +123,18 @@ export default function LeadForm() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto">
-        <div className="flex flex-col items-center mb-4">
-            <Image src="/images/info-icon.png" alt="Info" width={48} height={48} />
-            <h2 className="text-2xl font-semibold mt-4">Want to understand your visa options?</h2>
-            <p className="mb-6 mt-6 font-bold text-center">
-                Submit the form below and our team of experienced attorneys will review your information and send a preliminary assessment of your case based on your goals.
-            </p>
-        </div>
-        <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
+    <div className="max-w-xl mx-auto">
+      <div className="flex flex-col items-center mb-4">
+        <Image src="/images/info-icon.png" alt="Info" width={48} height={48} />
+        <h2 className="text-2xl font-semibold mt-4">Want to understand your visa options?</h2>
+        <p className="mb-6 mt-6 font-bold text-center">
+          Submit the form below and our team of experienced attorneys will review your information and send a preliminary assessment of your case based on your goals.
+        </p>
+      </div>
+      <form onSubmit={handleSubmit} className="space-y-4 max-w-sm mx-auto">
         <div>
-            <label htmlFor="firstName" className="block mb-2 font-semibold hidden">First Name</label>
-            <input
+          <label htmlFor="firstName" className="block mb-2 font-semibold hidden">First Name</label>
+          <input
             type="text"
             id="firstName"
             name="firstName"
@@ -142,13 +142,13 @@ export default function LeadForm() {
             onChange={handleInputChange}
             className="w-full p-2 border rounded"
             placeholder="First Name"
-            />
-            {errors.firstName && <p className="text-red-500 mt-1">{errors.firstName}</p>}
+          />
+          {errors.firstName && <p className="text-red-500 mt-1">{errors.firstName}</p>}
         </div>
 
         <div>
-            <label htmlFor="lastName" className="block mb-2 font-semibold hidden">Last Name</label>
-            <input
+          <label htmlFor="lastName" className="block mb-2 font-semibold hidden">Last Name</label>
+          <input
             type="text"
             id="lastName"
             name="lastName"
@@ -156,13 +156,13 @@ export default function LeadForm() {
             onChange={handleInputChange}
             className="w-full p-2 border rounded"
             placeholder="Last Name"
-            />
-            {errors.lastName && <p className="text-red-500 mt-1">{errors.lastName}</p>}
+          />
+          {errors.lastName && <p className="text-red-500 mt-1">{errors.lastName}</p>}
         </div>
 
         <div>
-            <label htmlFor="email" className="block mb-2 font-semibold hidden">Email</label>
-            <input
+          <label htmlFor="email" className="block mb-2 font-semibold hidden">Email</label>
+          <input
             type="email"
             id="email"
             name="email"
@@ -170,13 +170,13 @@ export default function LeadForm() {
             onChange={handleInputChange}
             className="w-full p-2 border rounded"
             placeholder="Email"
-            />
-            {errors.email && <p className="text-red-500 mt-1">{errors.email}</p>}
+          />
+          {errors.email && <p className="text-red-500 mt-1">{errors.email}</p>}
         </div>
 
         <div>
-            <label htmlFor="countryOfCitizenship" className="block mb-2 font-semibold hidden">Country of Citizenship</label>
-            <input
+          <label htmlFor="countryOfCitizenship" className="block mb-2 font-semibold hidden">Country of Citizenship</label>
+          <input
             type="text"
             id="countryOfCitizenship"
             name="countryOfCitizenship"
@@ -184,13 +184,13 @@ export default function LeadForm() {
             onChange={handleInputChange}
             className="w-full p-2 border rounded"
             placeholder="Country of Citizenship"
-            />
-            {errors.countryOfCitizenship && <p className="text-red-500 mt-1">{errors.countryOfCitizenship}</p>}
+          />
+          {errors.countryOfCitizenship && <p className="text-red-500 mt-1">{errors.countryOfCitizenship}</p>}
         </div>
 
         <div>
-            <label htmlFor="linkedin" className="block mb-2 font-semibold hidden">LinkedIn URL</label>
-            <input
+          <label htmlFor="linkedin" className="block mb-2 font-semibold hidden">LinkedIn URL</label>
+          <input
             type="url"
             id="linkedin"
             name="linkedin"
@@ -198,52 +198,52 @@ export default function LeadForm() {
             onChange={handleInputChange}
             className="w-full p-2 border rounded"
             placeholder="LinkedIn / Personal Website URL"
-            />
-            {errors.linkedin && <p className="text-red-500 mt-1">{errors.linkedin}</p>}
+          />
+          {errors.linkedin && <p className="text-red-500 mt-1">{errors.linkedin}</p>}
         </div>
 
         <div>
-            <label htmlFor="resume" className="block mb-2 font-semibold">Resume/CV</label>
-            <input
+          <label htmlFor="resume" className="block mb-2 font-semibold">Resume/CV</label>
+          <input
             type="file"
             id="resume"
             name="resume"
             onChange={handleFileChange}
             className="w-full p-2 border rounded"
             accept=".pdf,.doc,.docx"
-            />
-            {errors.resume && <p className="text-red-500 mt-1">{errors.resume}</p>}
+          />
+          {errors.resume && <p className="text-red-500 mt-1">{errors.resume}</p>}
         </div>
 
         <div>
-            <div className="flex flex-col items-center mb-2">
+          <div className="flex flex-col items-center mb-2">
             <Image src="/images/identify-icon.png" alt="Dice" width={48} height={48} />
             <h3 className="text-2xl font-semibold ml-2">Visa categories of interest?</h3>
-            </div>
-            <div className="space-y-2">
+          </div>
+          <div className="space-y-2">
             {['O-1', 'EB-1A', 'EB-2 NIW', "I don't know"].map(visa => (
-                <label key={visa} className="flex items-center">
+              <label key={visa} className="flex items-center">
                 <input
-                    type="checkbox"
-                    name="visasInterested"
-                    value={visa}
-                    checked={formData.visasInterested.includes(visa)}
-                    onChange={handleCheckboxChange}
-                    className="mr-2"
+                  type="checkbox"
+                  name="visasInterested"
+                  value={visa}
+                  checked={formData.visasInterested.includes(visa)}
+                  onChange={handleCheckboxChange}
+                  className="mr-2"
                 />
                 {visa}
-                </label>
+              </label>
             ))}
-            </div>
-            {errors.visasInterested && <p className="text-red-500 mt-1">{errors.visasInterested}</p>}
+          </div>
+          {errors.visasInterested && <p className="text-red-500 mt-1">{errors.visasInterested}</p>}
         </div>
 
         <div className="flex flex-col items-center mb-8">
-            <div className="flex flex-col items-center mb-2">
-                <Image src="/images/identify-icon.png" alt="Heart" width={48} height={48} />
-                <h3 className="text-2xl font-semibold mb-4">How can we help you?</h3>
-            </div>
-            <textarea
+          <div className="flex flex-col items-center mb-2">
+            <Image src="/images/identify-icon.png" alt="Heart" width={48} height={48} />
+            <h3 className="text-2xl font-semibold mb-4">How can we help you?</h3>
+          </div>
+          <textarea
             id="openInput"
             name="openInput"
             value={formData.openInput}
@@ -251,20 +251,20 @@ export default function LeadForm() {
             className="w-full p-2 border rounded max-w-md"
             rows={4}
             placeholder="What is your current status and when does it expire? What is your past immigration history? Are you looking for long-term permanent residency or short-term employment visa or both? Are there any timeline considerations?"
-            ></textarea>
-            {errors.openInput && <p className="text-red-500 mt-1">{errors.openInput}</p>}
+          ></textarea>
+          {errors.openInput && <p className="text-red-500 mt-1">{errors.openInput}</p>}
         </div>
 
         {errors.submit && <p className="text-red-500 mt-1">{errors.submit}</p>}
 
         <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full max-w-md bg-black text-white font-bold py-2 px-4 rounded hover:bg-green-600 transition duration-300 disabled:opacity-50 rounded-lg !mt-12"
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full max-w-md bg-black text-white font-bold py-2 px-4 rounded hover:bg-green-600 transition duration-300 disabled:opacity-50 rounded-lg !mt-12"
         >
-            {isSubmitting ? 'Submitting...' : 'Submit'}
+          {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
-        </form>
+      </form>
     </div>
   );
 }
