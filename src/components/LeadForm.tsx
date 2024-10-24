@@ -203,13 +203,24 @@ export default function LeadForm() {
         </div>
 
         <div>
-          <label htmlFor="resume" className="block mb-2 font-semibold">Resume/CV</label>
+          <label htmlFor="resume" className="file-upload-label">
+            <div className="file-upload-button">
+              <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 10V9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9V10C19.2091 10 21 11.7909 21 14C21 16.2091 19.2091 18 17 18H7C4.79086 18 3 16.2091 3 14C3 11.7909 4.79086 10 7 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M12 12V15M12 15L14 13M12 15L10 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              Upload Resume/CV
+              <span className="file-name">
+                {formData.resume ? formData.resume.name : 'No file chosen'}
+              </span>
+            </div>
+          </label>
           <input
             type="file"
             id="resume"
             name="resume"
             onChange={handleFileChange}
-            className="w-full p-2 border rounded"
+            className="hidden"
             accept=".pdf,.doc,.docx"
           />
           {errors.resume && <p className="text-red-500 mt-1">{errors.resume}</p>}
