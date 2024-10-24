@@ -114,7 +114,7 @@ export default function LeadForm() {
         <p className="mb-4 font-bold">Your information was submitted to our team of immigration attorneys. Expect an email from hello@tryalma.ai.</p>
         <button
           onClick={() => window.location.href = '/'}
-          className="bg-black text-white font-bold py-4 px-24 rounded-lg hover:bg-green-600 transition duration-300 mt-8 text-sm "
+          className="bg-black text-white font-bold py-4 px-24 rounded-lg hover:bg-gray-800 transition duration-300 mt-8 text-sm "
         >
           Go Back to Homepage
         </button>
