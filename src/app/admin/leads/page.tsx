@@ -7,12 +7,15 @@ import AuthWrapper from '@/components/AuthWrapper';
 import { Lead } from '@/app/api/leads/route';
 import { LEADS_PER_PAGE } from '@/config/constants';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+
 type SortConfig = {
   key: keyof Lead | null;
   direction: 'asc' | 'desc';
 };
 
 export default function LeadsListPage() {
+  const router = useRouter();
   const [leads, setLeads] = useState<Lead[]>([]);
   const [filteredLeads, setFilteredLeads] = useState<Lead[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -93,6 +96,11 @@ export default function LeadsListPage() {
     setFilteredLeads(sortedLeads);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('isAdminAuthenticated');
+    router.push('/');
+  };
+
   return (
     <AuthWrapper>
       <div className="flex flex-col-reverse lg:flex-row h-screen alma-admin-gradient">
@@ -108,9 +116,31 @@ export default function LeadsListPage() {
             <a href="#" className="block py-2 px-8 text-gray-600 cursor-not-allowed">Settings</a>
           </nav>
           <div className="p-8">
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-gray-300 rounded-full mr-2 flex items-center justify-center font-bold">A</div>
-              <span className="font-bold">Admin</span>
+            <div className="relative group">
+              <button 
+                onClick={() => handleLogout()}
+                className="w-full flex items-center justify-between hover:bg-gray-50 p-2 rounded-md transition-colors"
+              >
+                <div className="flex items-center">
+                  <div className="w-8 h-8 bg-gray-300 rounded-full mr-2 flex items-center justify-center font-bold">
+                    A
+                  </div>
+                  <span className="font-bold">Admin</span>
+                </div>
+                <svg 
+                  className="w-4 h-4 text-gray-600" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" 
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
