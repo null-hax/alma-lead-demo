@@ -1,0 +1,430 @@
+[
+  {
+    "id": "1729725337229",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "countryOfCitizenship": "USA",
+    "linkedin": "https://linkedin.com/in/johndoe",
+    "visasInterested": [
+      "O-1",
+      "EB-1A"
+    ],
+    "resumeUrl": "https://example.com/resumes/johndoe.pdf",
+    "openInput": "Looking to transition from H1B to permanent residency",
+    "status": "PENDING",
+    "createdAt": "2024-01-23T10:15:37.229Z"
+  },
+  {
+    "id": "1729725337230",
+    "firstName": "Sarah",
+    "lastName": "Johnson",
+    "email": "sarah.johnson@gmail.com",
+    "countryOfCitizenship": "Canada",
+    "linkedin": "https://linkedin.com/in/sarahjohnson",
+    "visasInterested": [
+      "EB-2 NIW"
+    ],
+    "resumeUrl": "https://example.com/resumes/sjohnson.pdf",
+    "openInput": "PhD in Computer Science, interested in permanent residency options",
+    "status": "REACHED_OUT",
+    "createdAt": "2024-01-23T11:20:15.123Z"
+  },
+  {
+    "id": "1729725337231",
+    "firstName": "Miguel",
+    "lastName": "Garcia",
+    "email": "miguel.garcia@outlook.com",
+    "countryOfCitizenship": "Mexico",
+    "linkedin": "https://linkedin.com/in/miguelgarcia",
+    "visasInterested": [
+      "O-1"
+    ],
+    "resumeUrl": "https://example.com/resumes/mgarcia.pdf",
+    "openInput": "Currently on F-1 OPT, seeking long-term options",
+    "status": "PENDING",
+    "createdAt": "2024-01-23T12:30:45.456Z"
+  },
+  {
+    "id": "1729725337232",
+    "firstName": "Wei",
+    "lastName": "Chen",
+    "email": "wei.chen@hotmail.com",
+    "countryOfCitizenship": "China",
+    "linkedin": "https://linkedin.com/in/weichen",
+    "visasInterested": [
+      "EB-1A",
+      "O-1"
+    ],
+    "resumeUrl": "https://example.com/resumes/wchen.pdf",
+    "openInput": "Accomplished researcher seeking permanent residency",
+    "status": "PENDING",
+    "createdAt": "2024-01-23T13:45:22.789Z"
+  },
+  {
+    "id": "1729725337233",
+    "firstName": "Anna",
+    "lastName": "Kowalski",
+    "email": "anna.kowalski@gmail.com",
+    "countryOfCitizenship": "Poland",
+    "linkedin": "https://linkedin.com/in/annakowalski",
+    "visasInterested": [
+      "EB-2 NIW"
+    ],
+    "resumeUrl": "https://example.com/resumes/akowalski.pdf",
+    "openInput": "Software engineer with ML expertise",
+    "status": "REACHED_OUT",
+    "createdAt": "2024-01-23T14:50:33.321Z"
+  },
+  {
+    "id": "1729725337234",
+    "firstName": "Raj",
+    "lastName": "Patel",
+    "email": "raj.patel@yahoo.com",
+    "countryOfCitizenship": "India",
+    "linkedin": "https://linkedin.com/in/rajpatel",
+    "visasInterested": [
+      "O-1",
+      "EB-1A"
+    ],
+    "resumeUrl": "https://example.com/resumes/rpatel.pdf",
+    "openInput": "Startup founder looking for options",
+    "status": "PENDING",
+    "createdAt": "2024-01-23T15:55:44.654Z"
+  },
+  {
+    "id": "1729725337235",
+    "firstName": "Emma",
+    "lastName": "Wilson",
+    "email": "emma.wilson@gmail.com",
+    "countryOfCitizenship": "UK",
+    "linkedin": "https://linkedin.com/in/emmawilson",
+    "visasInterested": [
+      "O-1"
+    ],
+    "resumeUrl": "https://example.com/resumes/ewilson.pdf",
+    "openInput": "Award-winning designer seeking US opportunities",
+    "status": "PENDING",
+    "createdAt": "2024-01-23T16:05:55.987Z"
+  },
+  {
+    "id": "1729725337236",
+    "firstName": "Lucas",
+    "lastName": "Silva",
+    "email": "lucas.silva@outlook.com",
+    "countryOfCitizenship": "Brazil",
+    "linkedin": "https://linkedin.com/in/lucassilva",
+    "visasInterested": [
+      "EB-2 NIW"
+    ],
+    "resumeUrl": "https://example.com/resumes/lsilva.pdf",
+    "openInput": "Biotech researcher with multiple publications",
+    "status": "REACHED_OUT",
+    "createdAt": "2024-01-23T17:15:16.753Z"
+  },
+  {
+    "id": "1729725337237",
+    "firstName": "Yuki",
+    "lastName": "Tanaka",
+    "email": "yuki.tanaka@gmail.com",
+    "countryOfCitizenship": "Japan",
+    "linkedin": "https://linkedin.com/in/yukitanaka",
+    "visasInterested": [
+      "O-1"
+    ],
+    "resumeUrl": "https://example.com/resumes/ytanaka.pdf",
+    "openInput": "AI researcher looking for long-term options",
+    "status": "PENDING",
+    "createdAt": "2024-01-23T18:25:27.159Z"
+  },
+  {
+    "id": "1729725337238",
+    "firstName": "Sofia",
+    "lastName": "Martinez",
+    "email": "sofia.martinez@yahoo.com",
+    "countryOfCitizenship": "Argentina",
+    "linkedin": "https://linkedin.com/in/sofiamartinez",
+    "visasInterested": [
+      "EB-1A"
+    ],
+    "resumeUrl": "https://example.com/resumes/smartinez.pdf",
+    "openInput": "Quantum computing researcher seeking options",
+    "status": "PENDING",
+    "createdAt": "2024-01-23T19:35:38.456Z"
+  },
+  {
+    "id": "1729725337239",
+    "firstName": "Omar",
+    "lastName": "Hassan",
+    "email": "omar.hassan@gmail.com",
+    "countryOfCitizenship": "Egypt",
+    "linkedin": "https://linkedin.com/in/omarhassan",
+    "visasInterested": [
+      "O-1",
+      "EB-2 NIW"
+    ],
+    "resumeUrl": "https://example.com/resumes/ohassan.pdf",
+    "openInput": "Fintech entrepreneur exploring visa options",
+    "status": "REACHED_OUT",
+    "createdAt": "2024-01-23T20:45:49.753Z"
+  },
+  {
+    "id": "1729725337240",
+    "firstName": "Elena",
+    "lastName": "Popov",
+    "email": "elena.popov@outlook.com",
+    "countryOfCitizenship": "Russia",
+    "linkedin": "https://linkedin.com/in/elenapopov",
+    "visasInterested": [
+      "EB-1A"
+    ],
+    "resumeUrl": "https://example.com/resumes/epopov.pdf",
+    "openInput": "Data scientist with patents seeking green card",
+    "status": "PENDING",
+    "createdAt": "2024-01-23T21:55:50.159Z"
+  },
+  {
+    "id": "1729725337241",
+    "firstName": "Thomas",
+    "lastName": "Anderson",
+    "email": "thomas.anderson@gmail.com",
+    "countryOfCitizenship": "Australia",
+    "linkedin": "https://linkedin.com/in/thomasanderson",
+    "visasInterested": [
+      "O-1"
+    ],
+    "resumeUrl": "https://example.com/resumes/tanderson.pdf",
+    "openInput": "Serial entrepreneur looking to expand to US",
+    "status": "PENDING",
+    "createdAt": "2024-01-23T22:05:11.456Z"
+  },
+  {
+    "id": "1729725337242",
+    "firstName": "Maria",
+    "lastName": "Santos",
+    "email": "maria.santos@yahoo.com",
+    "countryOfCitizenship": "Portugal",
+    "linkedin": "https://linkedin.com/in/mariasantos",
+    "visasInterested": [
+      "EB-2 NIW"
+    ],
+    "resumeUrl": "https://example.com/resumes/msantos.pdf",
+    "openInput": "Renewable energy researcher seeking options",
+    "status": "REACHED_OUT",
+    "createdAt": "2024-01-23T23:15:22.753Z"
+  },
+  {
+    "id": "1729725337243",
+    "firstName": "Hans",
+    "lastName": "Schmidt",
+    "email": "hans.schmidt@gmail.com",
+    "countryOfCitizenship": "Germany",
+    "linkedin": "https://linkedin.com/in/hansschmidt",
+    "visasInterested": [
+      "O-1",
+      "EB-1A"
+    ],
+    "resumeUrl": "https://example.com/resumes/hschmidt.pdf",
+    "openInput": "Robotics engineer with multiple patents",
+    "status": "PENDING",
+    "createdAt": "2024-01-24T00:25:33.159Z"
+  },
+  {
+    "id": "1729725337244",
+    "firstName": "Aisha",
+    "lastName": "Khan",
+    "email": "aisha.khan@outlook.com",
+    "countryOfCitizenship": "Pakistan",
+    "linkedin": "https://linkedin.com/in/aishakhan",
+    "visasInterested": [
+      "EB-2 NIW"
+    ],
+    "resumeUrl": "https://example.com/resumes/akhan.pdf",
+    "openInput": "Medical researcher seeking permanent residency",
+    "status": "PENDING",
+    "createdAt": "2024-01-24T01:35:44.456Z"
+  },
+  {
+    "id": "1729725337245",
+    "firstName": "Pierre",
+    "lastName": "Dubois",
+    "email": "pierre.dubois@gmail.com",
+    "countryOfCitizenship": "France",
+    "linkedin": "https://linkedin.com/in/pierredubois",
+    "visasInterested": [
+      "O-1"
+    ],
+    "resumeUrl": "https://example.com/resumes/pdubois.pdf",
+    "openInput": "AI researcher with significant publications",
+    "status": "REACHED_OUT",
+    "createdAt": "2024-01-24T02:45:55.753Z"
+  },
+  {
+    "id": "1729725337246",
+    "firstName": "Liam",
+    "lastName": "O'Connor",
+    "email": "liam.oconnor@yahoo.com",
+    "countryOfCitizenship": "Ireland",
+    "linkedin": "https://linkedin.com/in/liamoconnor",
+    "visasInterested": [
+      "EB-1A"
+    ],
+    "resumeUrl": "https://example.com/resumes/loconnor.pdf",
+    "openInput": "Blockchain developer seeking US opportunities",
+    "status": "PENDING",
+    "createdAt": "2024-01-24T03:55:06.159Z"
+  },
+  {
+    "id": "1729725337247",
+    "firstName": "Nina",
+    "lastName": "Ivanova",
+    "email": "nina.ivanova@gmail.com",
+    "countryOfCitizenship": "Ukraine",
+    "linkedin": "https://linkedin.com/in/ninaivanova",
+    "visasInterested": [
+      "O-1",
+      "EB-2 NIW"
+    ],
+    "resumeUrl": "https://example.com/resumes/nivanova.pdf",
+    "openInput": "Cybersecurity expert seeking options",
+    "status": "PENDING",
+    "createdAt": "2024-01-24T04:05:17.456Z"
+  },
+  {
+    "id": "1729725337248",
+    "firstName": "Carlos",
+    "lastName": "Rodriguez",
+    "email": "carlos.rodriguez@outlook.com",
+    "countryOfCitizenship": "Spain",
+    "linkedin": "https://linkedin.com/in/carlosrodriguez",
+    "visasInterested": [
+      "EB-1A"
+    ],
+    "resumeUrl": "https://example.com/resumes/crodriguez.pdf",
+    "openInput": "ML engineer with proven track record",
+    "status": "PENDING",
+    "createdAt": "2024-01-24T05:15:28.753Z"
+  },
+  {
+    "id": "1729725337249",
+    "firstName": "Anita",
+    "lastName": "Kumar",
+    "email": "anita.kumar@gmail.com",
+    "countryOfCitizenship": "India",
+    "linkedin": "https://linkedin.com/in/anitakumar",
+    "visasInterested": [
+      "O-1"
+    ],
+    "resumeUrl": "https://example.com/resumes/akumar.pdf",
+    "openInput": "Product manager with startup experience",
+    "status": "PENDING",
+    "createdAt": "2024-01-24T06:25:39.159Z"
+  },
+  {
+    "id": "1729725337250",
+    "firstName": "David",
+    "lastName": "Kim",
+    "email": "david.kim@yahoo.com",
+    "countryOfCitizenship": "South Korea",
+    "linkedin": "https://linkedin.com/in/davidkim",
+    "visasInterested": [
+      "EB-2 NIW"
+    ],
+    "resumeUrl": "https://example.com/resumes/dkim.pdf",
+    "openInput": "Biotech researcher seeking green card",
+    "status": "PENDING",
+    "createdAt": "2024-01-24T07:35:50.456Z"
+  },
+  {
+    "id": "1729725337251",
+    "firstName": "Isabella",
+    "lastName": "Rossi",
+    "email": "isabella.rossi@gmail.com",
+    "countryOfCitizenship": "Italy",
+    "linkedin": "https://linkedin.com/in/isabellarossi",
+    "visasInterested": [
+      "O-1",
+      "EB-1A"
+    ],
+    "resumeUrl": "https://example.com/resumes/irossi.pdf",
+    "openInput": "Fashion tech entrepreneur seeking options",
+    "status": "REACHED_OUT",
+    "createdAt": "2024-01-24T08:45:01.753Z"
+  },
+  {
+    "id": "1729725337252",
+    "firstName": "Ahmed",
+    "lastName": "Ali",
+    "email": "ahmed.ali@outlook.com",
+    "countryOfCitizenship": "UAE",
+    "linkedin": "https://linkedin.com/in/ahmedali",
+    "visasInterested": [
+      "EB-2 NIW"
+    ],
+    "resumeUrl": "https://example.com/resumes/aali.pdf",
+    "openInput": "Clean energy researcher seeking opportunities",
+    "status": "PENDING",
+    "createdAt": "2024-01-24T09:55:12.159Z"
+  },
+  {
+    "id": "1729725337253",
+    "firstName": "Julia",
+    "lastName": "Berg",
+    "email": "julia.berg@gmail.com",
+    "countryOfCitizenship": "Sweden",
+    "linkedin": "https://linkedin.com/in/juliaberg",
+    "visasInterested": [
+      "O-1"
+    ],
+    "resumeUrl": "https://example.com/resumes/jberg.pdf",
+    "openInput": "UX researcher with multiple patents",
+    "status": "PENDING",
+    "createdAt": "2024-01-24T10:05:23.456Z"
+  },
+  {
+    "id": "1729725337254",
+    "firstName": "Luis",
+    "lastName": "Morales",
+    "email": "luis.morales@yahoo.com",
+    "countryOfCitizenship": "Chile",
+    "linkedin": "https://linkedin.com/in/luismorales",
+    "visasInterested": [
+      "EB-1A"
+    ],
+    "resumeUrl": "https://example.com/resumes/lmorales.pdf",
+    "openInput": "Quantum computing expert seeking visa",
+    "status": "PENDING",
+    "createdAt": "2024-01-24T11:15:34.753Z"
+  },
+  {
+    "id": "1729725337255",
+    "firstName": "Fatima",
+    "lastName": "Ahmed",
+    "email": "fatima.ahmed@gmail.com",
+    "countryOfCitizenship": "Morocco",
+    "linkedin": "https://linkedin.com/in/fatimaahmed",
+    "visasInterested": [
+      "O-1",
+      "EB-2 NIW"
+    ],
+    "resumeUrl": "https://example.com/resumes/fahmed.pdf",
+    "openInput": "Data scientist exploring immigration options",
+    "status": "PENDING",
+    "createdAt": "2024-01-24T12:25:45.159Z"
+  },
+  {
+    "id": "1729725337256",
+    "firstName": "Viktor",
+    "lastName": "Novak",
+    "email": "viktor.novak@outlook.com",
+    "countryOfCitizenship": "Czech Republic",
+    "linkedin": "https://linkedin.com/in/viktornovak",
+    "visasInterested": [
+      "EB-1A"
+    ],
+    "resumeUrl": "https://example.com/resumes/vnovak.pdf",
+    "openInput": "Software architect seeking permanent residency",
+    "status": "REACHED_OUT",
+    "createdAt": "2024-01-24T13:35:56.456Z"
+  }
+]
