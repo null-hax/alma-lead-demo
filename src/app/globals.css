@@ -19,3 +19,7 @@ body {
   background: var(--background);
   font-family: 'Montserrat', sans-serif;
 }
+
+textarea::placeholder {
+  font-size: 12px;
+}
