@@ -15,6 +15,19 @@ type LeadsTableProps = {
   sortConfig: SortConfig;
 };
 
+const CheckIcon = () => (
+  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const ClockIcon = () => (
+  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
+    <path d="M12 7V12L15 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+  </svg>
+);
+
 export default function LeadsTable({ 
   leads, 
   onStatusChange, 
@@ -85,7 +98,17 @@ export default function LeadsTable({
                 {new Date(lead.createdAt).toLocaleString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })}
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
-                {lead.status === 'PENDING' ? 'Pending' : 'Reached Out'}
+                {lead.status === 'PENDING' ? (
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm bg-yellow-50 text-yellow-800">
+                    <ClockIcon />
+                    <span className="ml-1">Pending</span>
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm bg-green-50 text-green-800">
+                    <CheckIcon />
+                    <span className="ml-1">Reached Out</span>
+                  </span>
+                )}
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
                 {lead.countryOfCitizenship}
@@ -93,9 +116,23 @@ export default function LeadsTable({
               <td className="px-6 py-4 whitespace-nowrap">
                 <button
                   onClick={() => onStatusChange(lead.id, lead.status === 'PENDING' ? 'REACHED_OUT' : 'PENDING')}
-                  className="text-indigo-600 hover:text-indigo-900"
+                  className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors
+                    ${lead.status === 'PENDING' 
+                      ? 'bg-white border border-green-600 text-green-700 hover:bg-green-50' 
+                      : 'bg-white border border-yellow-600 text-yellow-700 hover:bg-yellow-50'
+                    }`}
                 >
-                  {lead.status === 'PENDING' ? 'Mark Reached Out' : 'Mark Pending'}
+                  {lead.status === 'PENDING' ? (
+                    <>
+                      <CheckIcon />
+                      Set as Reached Out
+                    </>
+                  ) : (
+                    <>
+                      <ClockIcon />
+                      Reset to Pending
+                    </>
+                  )}
                 </button>
               </td>
             </tr>
