@@ -1,21 +1,5 @@
 [
   {
-    "id": "1729725337229",
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "john.doe@example.com",
-    "countryOfCitizenship": "England",
-    "linkedin": "https://linkedin.com/in/johndoe",
-    "visasInterested": [
-      "O-1",
-      "EB-1A"
-    ],
-    "resumeUrl": "https://example.com/resumes/johndoe.pdf",
-    "openInput": "Looking to transition from H1B to permanent residency",
-    "status": "PENDING",
-    "createdAt": "2024-01-23T10:15:37.229Z"
-  },
-  {
     "id": "1729725337230",
     "firstName": "Sarah",
     "lastName": "Johnson",
@@ -259,37 +243,7 @@
     "status": "REACHED_OUT",
     "createdAt": "2024-01-24T02:45:55.753Z"
   },
-  {
-    "id": "1729725337246",
-    "firstName": "Liam",
-    "lastName": "O'Connor",
-    "email": "liam.oconnor@yahoo.com",
-    "countryOfCitizenship": "Ireland",
-    "linkedin": "https://linkedin.com/in/liamoconnor",
-    "visasInterested": [
-      "EB-1A"
-    ],
-    "resumeUrl": "https://example.com/resumes/loconnor.pdf",
-    "openInput": "Blockchain developer seeking US opportunities",
-    "status": "PENDING",
-    "createdAt": "2024-01-24T03:55:06.159Z"
-  },
-  {
-    "id": "1729725337247",
-    "firstName": "Nina",
-    "lastName": "Ivanova",
-    "email": "nina.ivanova@gmail.com",
-    "countryOfCitizenship": "Ukraine",
-    "linkedin": "https://linkedin.com/in/ninaivanova",
-    "visasInterested": [
-      "O-1",
-      "EB-2 NIW"
-    ],
-    "resumeUrl": "https://example.com/resumes/nivanova.pdf",
-    "openInput": "Cybersecurity expert seeking options",
-    "status": "PENDING",
-    "createdAt": "2024-01-24T04:05:17.456Z"
-  },
+
   {
     "id": "1729725337248",
     "firstName": "Carlos",
@@ -352,21 +306,6 @@
     "createdAt": "2024-01-24T08:45:01.753Z"
   },
   {
-    "id": "1729725337252",
-    "firstName": "Ahmed",
-    "lastName": "Ali",
-    "email": "ahmed.ali@outlook.com",
-    "countryOfCitizenship": "UAE",
-    "linkedin": "https://linkedin.com/in/ahmedali",
-    "visasInterested": [
-      "EB-2 NIW"
-    ],
-    "resumeUrl": "https://example.com/resumes/aali.pdf",
-    "openInput": "Clean energy researcher seeking opportunities",
-    "status": "PENDING",
-    "createdAt": "2024-01-24T09:55:12.159Z"
-  },
-  {
     "id": "1729725337253",
     "firstName": "Julia",
     "lastName": "Berg",
@@ -395,22 +334,6 @@
     "openInput": "Quantum computing expert seeking visa",
     "status": "PENDING",
     "createdAt": "2024-01-24T11:15:34.753Z"
-  },
-  {
-    "id": "1729725337255",
-    "firstName": "Fatima",
-    "lastName": "Ahmed",
-    "email": "fatima.ahmed@gmail.com",
-    "countryOfCitizenship": "Morocco",
-    "linkedin": "https://linkedin.com/in/fatimaahmed",
-    "visasInterested": [
-      "O-1",
-      "EB-2 NIW"
-    ],
-    "resumeUrl": "https://example.com/resumes/fahmed.pdf",
-    "openInput": "Data scientist exploring immigration options",
-    "status": "PENDING",
-    "createdAt": "2024-01-24T12:25:45.159Z"
   },
   {
     "id": "1729725337256",
