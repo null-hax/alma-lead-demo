@@ -25,7 +25,7 @@ textarea::placeholder {
 }
 
 .alma-admin-gradient {
-  background: radial-gradient(circle at 0 0, #d9dea5 0%, white 25%);
+  background: radial-gradient(circle at 0 0, #d9dea5 0%, white 350px);
   background-position: 0 0;
   background-size: 100% 100%;
   background-repeat: no-repeat;
