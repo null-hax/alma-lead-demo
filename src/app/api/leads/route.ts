@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
 
 export type Lead = {
   id: string;
@@ -14,7 +16,23 @@ export type Lead = {
   createdAt: Date;
 };
 
-export let leads: Lead[] = [];
+const DATA_FILE = path.join(process.cwd(), 'data', 'leads.json');
+
+function getLeads(): Lead[] {
+  if (!fs.existsSync(DATA_FILE)) {
+    return [];
+  }
+  const data = fs.readFileSync(DATA_FILE, 'utf8');
+  return JSON.parse(data);
+}
+
+function saveLeads(leads: Lead[]) {
+  const dirPath = path.dirname(DATA_FILE);
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+  }
+  fs.writeFileSync(DATA_FILE, JSON.stringify(leads, null, 2));
+}
 
 export async function POST(req: NextRequest) {
   const formData = await req.formData();
@@ -31,8 +49,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
   }
 
-  // In a real application, we would upload the file to a storage service
-  // For this example, we'll just use the file name
   const resumeUrl = `https://example.com/resumes/${resume.name}`;
 
   const newLead: Lead = {
@@ -49,7 +65,9 @@ export async function POST(req: NextRequest) {
     createdAt: new Date(),
   };
 
+  const leads = getLeads();
   leads.push(newLead);
+  saveLeads(leads);
 
   return NextResponse.json({ message: 'Lead submitted successfully', lead: newLead }, { status: 201 });
 }
@@ -59,6 +77,8 @@ export async function GET(req: NextRequest) {
   const page = parseInt(searchParams.get('page') || '1');
   const limit = parseInt(searchParams.get('limit') || '10');
   const sort = searchParams.get('sort') || 'createdAt';
+
+  const leads = getLeads();
 
   const startIndex = (page - 1) * limit;
   const endIndex = page * limit;
