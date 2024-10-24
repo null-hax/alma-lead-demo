@@ -84,8 +84,8 @@ export async function GET(req: NextRequest) {
   const endIndex = page * limit;
 
   const sortedLeads = [...leads].sort((a, b) => {
-    if (a[sort as keyof Lead] < b[sort as keyof Lead]) return -1;
-    if (a[sort as keyof Lead] > b[sort as keyof Lead]) return 1;
+    if (a[sort as keyof Lead] < b[sort as keyof Lead]) return 1;
+    if (a[sort as keyof Lead] > b[sort as keyof Lead]) return -1;
     return 0;
   });
 
