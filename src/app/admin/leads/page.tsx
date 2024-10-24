@@ -6,7 +6,7 @@ import LeadsTable from '@/components/LeadsTable';
 import AuthWrapper from '@/components/AuthWrapper';
 import { Lead } from '@/app/api/leads/route';
 import { LEADS_PER_PAGE } from '@/config/constants';
-
+import Link from 'next/link';
 type SortConfig = {
   key: keyof Lead | null;
   direction: 'asc' | 'desc';
@@ -95,13 +95,15 @@ export default function LeadsListPage() {
 
   return (
     <AuthWrapper>
-      <div className="flex h-screen alma-admin-gradient">
+      <div className="flex flex-col-reverse lg:flex-row h-screen alma-admin-gradient">
         {/* Sidebar */}
-        <div className="w-64 flex flex-col border-r border-gray-200">
+        <div className="w-full lg:w-64 flex flex-col border-r border-gray-200">
           <div className="p-8">
-            <Image src="/images/logo.png" alt="Alma Logo" width={100} height={50} />
+            <Link href="/">
+              <Image src="/images/logo.png" alt="Alma Logo" width={100} height={50} />
+            </Link>
           </div>
-          <nav className="flex-grow mt-8">
+          <nav className="lg:flex-grow lg:mt-8">
             <a href="#" className="block py-2 px-8 text-gray-900 font-bold">Leads</a>
             <a href="#" className="block py-2 px-8 text-gray-600 cursor-not-allowed">Settings</a>
           </nav>
@@ -117,7 +119,7 @@ export default function LeadsListPage() {
         <div className="flex-1 flex flex-col overflow-hidden">
           <main className="flex-1 overflow-x-hidden overflow-y-auto">
             <div className="container mx-auto px-6 py-8">
-              <h1 className="text-3xl font-bold mb-6">Leads</h1>
+              <h1 className="text-3xl font-bold mb-6 mt-2">Leads</h1>
               <div className="flex items-start gap-2 mb-2">
                 <div className="relative">
                   <input
