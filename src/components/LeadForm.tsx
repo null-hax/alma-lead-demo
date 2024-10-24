@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
+import { COUNTRIES } from '@/config/constants';
 
 type FormData = {
   firstName: string;
@@ -176,15 +177,20 @@ export default function LeadForm() {
 
         <div>
           <label htmlFor="countryOfCitizenship" className="block mb-2 font-semibold hidden">Country of Citizenship</label>
-          <input
-            type="text"
+          <select
             id="countryOfCitizenship"
             name="countryOfCitizenship"
             value={formData.countryOfCitizenship}
             onChange={handleInputChange}
-            className="w-full p-2 border rounded"
-            placeholder="Country of Citizenship"
-          />
+            className="w-full p-2 border rounded text-gray-400"
+          >
+            <option value="">Country of Citizenship</option>
+            {COUNTRIES.map(country => (
+              <option key={country} value={country}>
+                {country}
+              </option>
+            ))}
+          </select>
           {errors.countryOfCitizenship && <p className="text-red-500 mt-1">{errors.countryOfCitizenship}</p>}
         </div>
 
