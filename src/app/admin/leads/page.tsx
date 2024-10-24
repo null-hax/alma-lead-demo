@@ -81,6 +81,7 @@ export default function LeadsListPage() {
       fetchLeads(currentPage);
     } catch (err) {
       setError('Error updating lead status. Please try again.');
+      console.error(err);
     }
   };
 

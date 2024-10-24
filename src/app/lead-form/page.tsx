@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 
 export default function LeadFormPage() {
@@ -18,9 +19,9 @@ export default function LeadFormPage() {
           />
         </div>
         <div className="container mx-auto flex flex-col items-start justify-between max-w-2xl relative z-20">
-          <a href="/">
+          <Link href="/">
             <Image src="/images/logo.png" alt="Alma AI Logo" width={64} height={32} />
-          </a>
+          </Link>
           <h1 className="text-4xl lg:text-6xl font-bold mt-12">Get An Assessment Of Your Immigration Case</h1>
         </div>
       </header>
